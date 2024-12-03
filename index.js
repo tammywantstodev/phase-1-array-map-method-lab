@@ -12,5 +12,15 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  function capLet(word){
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  }
+  const titleCased = () =>{
+    return tutorials.map(sentence =>{
+      const splitTitles = sentence.split(' ')
+    const firstLetter=splitTitles.map(capLet);
+    const joinWords=firstLetter.join(' ');
+    return joinWords;
+    })
+  };
 }
